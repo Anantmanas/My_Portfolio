@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <title>Blogs</title>
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+
+            <ul class="menu">
+                <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="blogs.html"><i class="fa fa-clone"></i>Blogs</a></li>
+                <li><a href="index.html"><i class="fa fa-cogs"></i>Projects</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="container header text-center ">
+        <img src="img/git.jpg" alt="" />
+        <h1 class="text-inverted">Git and Github, an intro for beginners</span></h1>
+    </header>
+    <hr>
+
+    <section class="section bg-offwhite text-inverted">
+        <div class="container">
+
+            <p>Most of the developers use GitHub or any other Git Client in their development cycle. But have you always
+                wondered what is git and why do they use it?
+                In this post, let’s look at the basics of git and how easy is it to create your first repo on GitHub.
+            </p>
+            <h1 id="-what-is-git-"><strong>What is Git?</strong></h1>
+            <p>Git is an open-source project developed in 2005 by Linus Torvalds (Yes, you guessed it right, the famous
+                creator of Linux Operating System). It is a <strong>Distributed Version Control System</strong>.
+                That sounded like a charm straight out of J. K. Rowling’s Book. Let me explain it in muggles’ English.
+            </p>
+            <h3 id="-version-control-system-vcs-"><strong>Version Control System (VCS)</strong></h3>
+            <p>VCS is a tool that allows users to track changes in the content. It keeps track of various changes made
+                to the content as people and multiple teams collaborate.
+                In layman terms, Think of the content as a book you and your friend are writing together, you both come
+                with different ideas for the arc of your character and make various versions of the story over time as
+                characters increase so does multiple storylines, it would be a nightmare to keep everything in order,
+                this is where VCS comes into play, it keeps track of following things
+                -What changes were made?
+                -Who made the changes?
+                -When were the changes made?</p>
+            <p>If you want to go back to the storyline where your protagonist doesn’t die, you can just revert to it.
+                You can <strong><em>Merge</em></strong> your friend’s ideas into your version. If someone screws up, he
+                can just compare with the previous versions and rectify the mistake without disturbing the others.</p>
+            <p><strong>Repository</strong> - It is like a folder for your project’s files. It contains all of your
+                project files and their detailed history.</p>
+            <h3 id="-distributed-version-control-system-dvcs-"><strong>Distributed Version Control System
+                    (DVCS)</strong></h3>
+            <p>DVCS means that the code isn’t just hosted on a single server or system but also distributed across
+                various systems. This means that each developer has a copy of the code on his local system.
+                Git has a remote repository stored on a server and a local repository stored on the developer’s
+                computer. Developers don’t need a constant central connection to the remote repository and can
+                collaborate suiting their timetable. Each developer has a transparent history of changes, who made the
+                changes and when.
+                So now we have the basic introduction of Git, let’s look at GitHub.</p>
+            <hr>
+            <h1 id="what-is-github-">What is GitHub?</h1>
+            <p>I read the following line somewhere on the internet and to me; it is one of the best definitions for
+                GitHub.</p>
+            <blockquote>
+                <p>“<em>What Pornhub is to Porn, GitHub is to Git</em>”</p>
+            </blockquote>
+            <p>Jokes apart think of it in this way, when you use git locally you can only manage your local code but
+                that is rarely the case, mostly you have to collaborate with other people or teams and for that, you
+                need to have a remote repository setup on the cloud, here GitHub fits in.</p>
+            <p>GitHub is a git hosting repository service, but it adds many of its features to the core git. Git is a
+                command-line tool but GitHub is an interactive website that also allows some unique features on top of
+                Git like GitHub Flow (Sounds like an excellent idea for the next post). There is a community of over 15
+                million developers on GitHub.</p>
+            <h2 id="how-to-create-your-first-repo">How to Create your First Repo</h2>
+            <p>Are you excited to create your first repository from scratch?
+                But first, install git on your system from <a href="https://git-scm.com/downloads">here</a> and create a
+                GitHub account if you haven’t.</p>
+            <p>Let’s Begin Now!!</p>
+            <p>Important: <em>The following instructions are for bash terminal</em></p>
+            <ul>
+                <li>Create a directory for your project using the <em>mkdir</em> command</li>
+            </ul>
+            <pre><code><span class="hljs-built_in">mkdir</span> firstProject
+  </code></pre>
+            <ul>
+                <li>Go into the new directory</li>
+            </ul>
+            <pre><code>cd .<span class="hljs-regexp">/firstProject/</span>
+  </code></pre>
+            <ul>
+                <li>Initialize the Git repo using git init</li>
+            </ul>
+            <pre><code><span class="hljs-attribute">git init</span>
+  </code></pre>
+            <ul>
+                <li>Create a file now</li>
+            </ul>
+            <pre><code>echo “This <span class="hljs-keyword">is</span> <span class="hljs-keyword">my</span> <span class="hljs-keyword">first</span> line <span class="hljs-keyword">of</span> <span class="hljs-built_in">text</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">file</span>” &gt; readme.md
+  </code></pre>
+            <ul>
+                <li>Add the files to git. After this command, the Git will keep track of the changes made to the file.
+                </li>
+            </ul>
+            <pre><code>git <span class="hljs-keyword">add</span><span class="bash"> readme.md</span>
+  </code></pre>
+            <ul>
+                <li>Commit (save) the changes to git, the command tells to save the changes along with the message
+                    “initial commit”</li>
+            </ul>
+            <pre><code>git <span class="hljs-keyword">commit</span> -m “<span class="hljs-keyword">initial</span> <span class="hljs-keyword">commit</span>”
+  </code></pre>
+            <p>You now have a local git repository. You can use it locally, but I would rather host it on my GitHub.</p>
+            <h1 id="connecting-it-to-github">Connecting it to GitHub</h1>
+            <ul>
+                <li>Go to GitHub,</li>
+                <li>Sign in to your account</li>
+                <li>Click on the new repository button (Hint: It has a green background)</li>
+                <li>Enter the repo’s name “<em>firstProject</em>”</li>
+                <li>Click Create Repository
+                    You would see sets of instructions on the page, follow the second one -<em>or push an existing
+                        repository...</em>
+                    <pre><code>git remote <span class="hljs-keyword">add</span><span class="bash"> origin https://github.com/yourUsername/firstProject.git
+  </span>git push -u origin master
+  </code></pre>
+                </li>
+            </ul>
+            <p>The first command adds the remote address of the repository to the Git and the second command tells the
+                system to push (send) local repo to the remote origin repo.</p>
+            <p>Voila!! You have successfully hosted your first repo on GitHub.Give yourself a treat today, you deserve
+                it.</p>
+            <p>This is my first post on any platform, so kindly share your reviews and suggestions in the comments. I
+                would very much like to improve. I guess we all learned something today.</p>
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>
